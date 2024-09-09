@@ -11,7 +11,7 @@ Desenvolver um sistema para uma rede social que permita a interação entre usu�
 
 - O sistema deve permitir que novos usuários se registrem fornecendo informações básicas, como nome, e-mail e senha.
 O processo de autenticação deve garantir que somente usuários registrados possam acessar o sistema.
-###Usuários:
+### Usuários:
 
 - O sistema deve gerenciar perfis de usuários, que contêm informações adicionais como foto de perfil e biografia.
 Os usuários podem interagir entre si através das diferentes funcionalidades do sistema.

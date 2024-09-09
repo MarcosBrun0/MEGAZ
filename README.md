@@ -15,11 +15,11 @@ O processo de autenticação deve garantir que somente usuários registrados pos
 
 - O sistema deve gerenciar perfis de usuários, que contêm informações adicionais como foto de perfil e biografia.
 Os usuários podem interagir entre si através das diferentes funcionalidades do sistema.
-Posts:
+### Posts:
 
 - Usuários podem criar publicações (posts) contendo textos e/ou mídias.
 Cada post está associado a um usuário e pode receber interações, como curtidas e comentários.
-Comentários:
+### Comentários:
 
 - Usuários podem comentar nas publicações de outros usuários.
 Cada comentário está associado a um post e a um usuário.
@@ -29,4 +29,4 @@ Sistema de Seguidores:
 O relacionamento de seguidor/seguido é unidirecional (um usuário pode seguir outro sem reciprocidade).
 Interações:
 
-Posts podem receber interações de outros usuários, como curtidas.
+- Posts podem receber interações de outros usuários, como curtidas.

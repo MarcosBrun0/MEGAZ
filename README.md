@@ -30,3 +30,9 @@ O relacionamento de seguidor/seguido é unidirecional (um usuário pode seguir o
 Interações:
 
 - Posts podem receber interações de outros usuários, como curtidas.
+
+ ## Modelagem do Banco de Dados:
+
+ ![Megaz Uml diagram](info/megazdatabasemodel.png)
+
+ Modelagem das entidades e relacionamentos do banco de dados utilizando uml 

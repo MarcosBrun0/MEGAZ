@@ -1,33 +1,37 @@
 package com.redesocial.redesocial.models;
 
-import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-@Entity(name = "Usuarios")
-@Table(name = "Usuarios")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-
-    private String name;
     private String email;
-    private String phone;
-    private String picture;
+    private String senha;
+    private String nome;
+    private String relacionamento;
+    private int idade;
+    private int id;
 
-    public String getPicture() {
-        return picture;
+    private ArrayList<Post> posts;
+    private ArrayList<Follow> followers;
+
+    public User() {
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public User(String email, String senha, String nome, String relacionamento, int idade, int id, ArrayList<Post> posts, ArrayList<Follow> followers) {
+        this.email = email;
+        this.senha = senha;
+        this.nome = nome;
+        this.relacionamento = relacionamento;
+        this.idade = idade;
+        this.id = id;
+        this.posts = posts;
+        this.followers = followers;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public User(ArrayList<Post> posts, ArrayList<Follow> followers, String nome) {
+        this.posts = posts;
+        this.followers = followers;
+        this.nome = nome;
     }
 
     public String getEmail() {
@@ -38,19 +42,83 @@ public class User {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public String getId() {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getRelacionamento() {
+        return relacionamento;
+    }
+
+    public void setRelacionamento(String relacionamento) {
+        this.relacionamento = relacionamento;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public ArrayList<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(ArrayList<Post> posts) {
+        this.posts = posts;
+    }
+
+    public ArrayList<Follow> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(ArrayList<Follow> followers) {
+        this.followers = followers;
+
+
+    }
+
+    public void Fazer_Cadastro() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Escreva seu nome");
+        this.nome = scanner.nextLine();
+        System.out.println("Escreva seu relacionamento");
+        this.relacionamento = scanner.nextLine();
+        System.out.println("Escreva seu email");
+        this.email = scanner.nextLine();
+        System.out.println("Escreva sua senha");
+        this.senha = scanner.nextLine();
+        System.out.println("Escreva sua idade");
+        this.idade = scanner.nextInt();
+    }
+
+    public void Status() {
+        System.out.println("Informações da Sua conta: ");
+        System.out.println("Email: " + this.email);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Relacionamento: " + this.relacionamento);
+        System.out.println("Idade: " + this.idade);
     }
 }
